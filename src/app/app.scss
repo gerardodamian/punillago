@@ -1,0 +1,4 @@
+main {
+  min-height: calc(100vh - var(--header-h));
+  padding-bottom: calc(var(--nav-h) + env(safe-area-inset-bottom, 0px) + 16px);
+}

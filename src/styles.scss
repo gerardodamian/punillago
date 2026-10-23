@@ -1,0 +1,45 @@
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --green-700: #2f6f2e;
+  --green-500: #5b9a32;
+  --teal-600: #1f7f8e;
+  --navy-900: #0c2b33;
+  --orange-500: #f28c28;
+  --bg: #f5f8f3;
+  --surface: #ffffff;
+  --text: #14282d;
+  --muted: #5d6f73;
+  --border: #e1e8e2;
+  --radius: 16px;
+  --shadow: 0 6px 20px rgba(12, 43, 51, 0.08);
+  --font-title: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --nav-h: 64px;
+  --header-h: 56px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--font-title); margin: 0; color: var(--navy-900); }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.container { width: 100%; max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+/* Marcadores del mapa (los crea Leaflet, por eso van en estilos globales) */
+.pin-wrap { background: none; border: 0; }
+.pin { display: grid; place-items: center; width: 38px; height: 38px; font-size: 20px; background: var(--surface);
+  border: 3px solid var(--green-700); border-radius: 50%; box-shadow: var(--shadow); }
+.pop { display: grid; gap: 4px; font-family: var(--font-body); }
+.pop span { color: var(--muted); font-size: 12px; }
+.pop button { margin-top: 4px; border: 0; border-radius: 999px; padding: 8px 12px; background: var(--green-700); color: #fff; font-weight: 600; }
